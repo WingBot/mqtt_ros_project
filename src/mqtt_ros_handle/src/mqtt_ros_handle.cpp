@@ -7,8 +7,7 @@
 class Listener
 {
 public:
-    // std::string copy_data = "init init init";
-    // using namespace std;
+
     ros::Publisher mqtt_pub;
     Json::Value value;
     Json::Value return_value;
