@@ -21,8 +21,7 @@ public:
   void callback(const std_msgs::String::ConstPtr& msg);
   void handle_data()
     {
-        // pub_msg.data = sub_msg;
-    //   std::cout << "handle data is :" << sub_msg << "\n";
+
        if (reader.parse(sub_msg, value))
         {
             std::cout << "enter" << std::endl;
