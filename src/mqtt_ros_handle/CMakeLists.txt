@@ -115,7 +115,7 @@ catkin_package(
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
 include_directories(
-# include
+ include
   ${catkin_INCLUDE_DIRS}
 )
 
@@ -136,6 +136,10 @@ include_directories(
 add_executable(mqtt_ros_handle_node src/mqtt_ros_handle.cpp)
 target_link_libraries(mqtt_ros_handle_node jsoncpp ${catkin_LIBRARIES})
 install(TARGETS mqtt_ros_handle_node RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
+
+add_executable(amr_client_node src/amr_client.cpp)
+target_link_libraries(amr_client_node jsoncpp ${catkin_LIBRARIES})
+install(TARGETS amr_client_node RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
 
 add_executable(mqtt_json_node src/mqtt_json.cpp)
 target_link_libraries(mqtt_json_node jsoncpp ${catkin_LIBRARIES})
